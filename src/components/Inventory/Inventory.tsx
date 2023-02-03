@@ -208,11 +208,11 @@ export const Inventory = withRouter(( props:InventoryProps ) => {
         },
         {
             text: 'Sign In',
-            onClick: () => history.push('/signin')
+            onClick: () => history.push('/user_signin')
         },
         {
             text: 'Sign Out',
-            onClick: () => history.push('/signout')
+            onClick: () => history.push('/SignOut')
         },
         {
             text: 'About',

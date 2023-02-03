@@ -77,11 +77,29 @@ export const server_calls = {
 
     ////////////////////
 
+    usersGet: async () => { //here on the 'async' we are requesting data and not sending any variables inside the parentheses
+        const response = await fetch('https://horse-gilded-gymnast.glitch.me/auth2/register', {
+            method: 'GET',
+            headers: {  //This is like the section on 'insomnia' for 'headers'
+                'Content-Type': 'application/json',
+                'x-access-token': `Bearer ${token}` 
+            }
+        });
+
+        //Error handling
+        if (!response.ok) {
+            throw new Error('Failed to fetch data from server') 
+        }
+
+        return await response.json()
+    },
+
     createUser: async(data: any = {}) => { 
-        const response = await fetch('https://lime-rebel-sing.glitch.me/auth/signup', {
+        const response = await fetch('https://twisty-congruous-trouble.glitch.me/auth2/register', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
+                // '' : ''
             },
             
 
@@ -95,4 +113,32 @@ export const server_calls = {
 
         return await response.json()
         },
+
+    userUpdate: async(id:string, data: any = {}) => { //we are passing an 'id' variable because we need to let the sapp know which contact we are 
+        //updating
+        const response = await fetch(`https://horse-gilded-gymnast.glitch.me/auth2/register/${id}`, {
+            method: 'POST',
+            // headers: {
+            //     'Content-Type': 'application/json',
+            //     'x-access-token': `Bearer ${token}`
+            // },
+
+            body: JSON.stringify(data)
+        })
+
+        if(!response.ok){
+            throw new Error('Failed to Create new data on server');
+        }
+    },
+
+    
+    userDelete: async(id: string) => {
+        const response = await fetch(`https://horse-gilded-gymnast.glitch.me/auth2/register/${id}`, {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json',
+                'x-access-token': `Bearer ${token}`
+            }
+        })
+    }
 }

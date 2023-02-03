@@ -37,7 +37,7 @@ export const WhiskeyForm = (props:WhiskeyFormProps) => {
             server_calls.update(props.id!, data);
             console.log(`Updated:${data} ${props.id}`);
             console.log(data);
-            setTimeout( () => {window.location.reload()}, 1000); //this waits for a bit of time and then rteloads the page
+            setTimeout( () => {window.location.reload()}, 7000); //this waits for a bit of time and then rteloads the page
             event.target.reset();
         } else {
             // Dispatch basically updates our state / Redux store
