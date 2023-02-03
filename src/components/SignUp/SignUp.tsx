@@ -113,36 +113,11 @@ export const SignUp = withRouter((props:RegisterProps ) => {
     const auth = useAuth();
     const classes = useStyles();
 
-    // const dispatch = useDispatch(); 
     const store = useStore();
-    // const name = useSelector<WhiskeyState>(state => state.name);
-    // const { register, handleSubmit } = useForm({ })
-
-    // const onSubmit = (data:any, event:any) => { 
-    //     server_calls.createUser(store.getState()); 
-    //     setTimeout( () => {window.location.reload()}, 1000)
-    // };  //This is what was reloading the page and taking me nowhere
-
-    // const [dialogOpen, setDialogOpen] = useState(false);
-
-    // 
-
-    // export const Inventory = withRouter(( props:InventoryProps ) => {
-    // console.log(props);
-    // const { history } = props;
-    // const classes = useStyles();
-    // const theme = useTheme();
-    // const [open, setOpen] = useState(false);
 
     const [dialogOpen, setDialogOpen] = useState(false);
 
-    // const handleDrawerOpen = () => {
-    //     setOpen(true);
-    // };
-
-    // const handleDrawerClose = () => {
-    //     setOpen(false)
-    // };
+ 
 
     const handleDialogClickOpen = () => {
         setDialogOpen(true)
@@ -166,27 +141,8 @@ export const SignUp = withRouter((props:RegisterProps ) => {
               <div className={classes.background}>
               <Container maxWidth = 'sm' className={classes.containerStyle}>
                   <Typography className={classes.typographyStyle}>Sign Up Below</Typography>
-                  <div className={classes.typographyStyle} > {/*onSubmit = {handleSubmit(onSubmit)}*/}
-                        {/* <div>
-                          <label htmlFor="email">Email</label>
-                          <Input {...register('email')} name="email" placeholder="Place Email Here" />
-                        </div>
-                        <div >
-                            <label htmlFor="first_name">First Name</label>
-                            <Input {...register('first_name')}name="email" placeholder="Place First Name Here" />
-                        </div>
-                        <div >
-                            <label htmlFor="last_name">Last Name</label>
-                            <Input {...register('last_name')}name="email" placeholder="Place Last Name Here" />
-                        </div>
-                        <div>
-                            <label htmlFor="password">Password</label>
-                            <Input {...register('password')} name="password" placeholder="Place Password Here" />
-                        </div> */}
+                  <div className={classes.typographyStyle} > 
                         <Button type="submit" variant='contained' color='primary' onClick={handleDialogClickOpen}>Sign Up Form</Button>
-                        {/* <Button type="submit" variant='contained' color='primary' >Sign Up! */}
-                            {/* <Link to='/SignIn'></Link> */}
-                        {/* </Button> */}
                             <Dialog open={dialogOpen} onClose={handleDialogClickClose} aria-labelledby="form-dialog-title">
                                 <DialogTitle id="form-dialog-title">New User Form</DialogTitle>
                                     <DialogContent>
@@ -206,18 +162,3 @@ export const SignUp = withRouter((props:RegisterProps ) => {
   )
 });
 
-//  <Button className={classes.toolbar_button} onClick={handleDialogClickOpen}>Sign Up Form</Button>
-
-                    {/* Dialog Pop Up */}
-                    // <Dialog open={dialogOpen} onClose={handleDialogClickClose} aria-labelledby="form-dialog-title">
-                    //     <DialogTitle id="form-dialog-title">Add New Whiskey Record</DialogTitle>
-                    //     <DialogContent>
-                    //         <DialogContentText></DialogContentText>
-                    //         <WhiskeyForm />
-                    //     </DialogContent>
-                    //     <DialogActions>
-                    //         <Button onClick={handleDialogClickClose} color="primary">Cancel</Button>
-                    //         <Button onClick={handleDialogClickOpen} color="primary">Done</Button>
-                    //     </DialogActions>
-                    // </Dialog>
-                    {/* End dialog pop-up */}
