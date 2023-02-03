@@ -103,24 +103,7 @@ interface RegisterProps {
     match : RouteComponentProps['match'];
 }
 
-interface WhiskeyState {
-  email: string;
-  password: string;
 
-}
-
-interface WhiskeyFormProps {
-  id?:string;
-  data?:{}
-}
-
-
-  interface WhiskeyState {
-    name: string;
-    email: string;
-    address: string;
-    phone_number: string;
-  }
 
 
 export const SignUp = withRouter((props:RegisterProps ) => {

@@ -1,13 +1,13 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 
-const rootSlice = createSlice({
+const rootSlice2 = createSlice({
     name: "root",
     initialState: {
-        email: "email",
-        first_name : "first_name",
-        last_name: "last_name",
-        password: "password",
+        email: "Email",
+        first_name : "First Name",
+        last_name: "Last Name",
+        password: "Password",
     },
     reducers: {
         chooseEmail: (state, action) => {state.email = action.payload},
@@ -17,6 +17,6 @@ const rootSlice = createSlice({
     }
 })
 
-export const reducer = rootSlice.reducer;
-export const {chooseEmail, chooseFirstname, chooseLastname, choosePassword } = rootSlice.actions;
+export const reducer = rootSlice2.reducer;
+export const {chooseEmail, chooseFirstname, chooseLastname, choosePassword } = rootSlice2.actions;
 
