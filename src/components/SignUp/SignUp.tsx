@@ -1,43 +1,17 @@
 import { Navbar } from '../Navbar'
 import React, { useState } from 'react'
-import firebase from 'firebase/app';
-import { useAuth,  AuthCheck } from 'reactfire';
+import { useAuth } from 'reactfire';
 import 'firebase/auth';
-import { Input } from '../SharedComponents/Input';
-import { Container, Button, makeStyles, Typography, Snackbar  } from '@material-ui/core';
-import MuiAlert, { AlertProps } from '@material-ui/lab/Alert';
-import { useDispatch, useSelector, useStore } from 'react-redux';
-import { useForm } from 'react-hook-form';
-import { chooseBrand, chooseYear, chooseMalt, chooseGrain } from '../../redux/slices/RootSlice';
-import { Link } from 'react-router-dom';
+import { Container, Button, makeStyles, Typography } from '@material-ui/core';
+import { useStore } from 'react-redux';
 import { Drawer as MUIDrawer, 
-    ListItem, 
-    List, 
-    ListItemIcon,
-    ListItemText,
-    Theme,
-    useTheme,
-    createStyles,
-    AppBar,
-    Toolbar,
-    IconButton,
-    Divider,
     Dialog,
     DialogActions,
     DialogContent,
     DialogContentText,
     DialogTitle,
      } from '@material-ui/core';
-
-import { server_calls } from '../../api';
-import { RegisterForm } from '../SignUpForm'
-import CssBaseline from '@material-ui/core/CssBaseline';
-import MenuIcon from '@material-ui/icons/Menu';
-import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
-import ChevronRightIcon from '@material-ui/icons/ChevronRight';
-import clsx from 'clsx';
-import { RouteComponentProps, withRouter, Switch, Route } from "react-router-dom";
-import { DataTable } from '../DataTable';
+import { RouteComponentProps, withRouter } from "react-router-dom";
 import image from '../../assets/images/Ammunition+Bourbon.jpeg'
 
 
