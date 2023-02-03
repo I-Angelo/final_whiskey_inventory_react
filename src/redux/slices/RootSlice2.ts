@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 
-const rootSlice2 = createSlice({
+const rootSlice = createSlice({
     name: "root",
     initialState: {
         email: "email",
@@ -17,6 +17,6 @@ const rootSlice2 = createSlice({
     }
 })
 
-export const reducer = rootSlice2.reducer;
-export const {chooseEmail, chooseFirstname, chooseLastname, choosePassword } = rootSlice2.actions;
+export const reducer = rootSlice.reducer;
+export const {chooseEmail, chooseFirstname, chooseLastname, choosePassword } = rootSlice.actions;
 
