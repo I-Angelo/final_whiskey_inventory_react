@@ -13,6 +13,7 @@ import { Drawer as MUIDrawer,
      } from '@material-ui/core';
 import { RouteComponentProps, withRouter } from "react-router-dom";
 import image from '../../assets/images/Ammunition+Bourbon.jpeg'
+import { RegisterForm } from '../SignUpForm'
 
 
 
@@ -56,17 +57,17 @@ const useStyles = makeStyles({
 
   background: {
     backgroundImage: `url(${image})`,
-    // bacgroundSize: 'cover',
+    bacgroundSize: 'cover',
     // backgroundRepeat: 'no-repeat',
     overflow: 'hidden',
-    width: '100%',
-    height: '100%',
+    width: '100vw',
+    height: '100vh',
     // backgroundPosition: 'top',
-    backGroundSize: 'auto',
+    backgroundSize: '100%',
     // position: 'fixed',
     // opacity: 0.5,
-    zIndex: -1,
-    position: 'absolute'
+    // zIndex: -1,
+    backgroundPosition: 'center center'
 }
 
 });
@@ -83,12 +84,7 @@ interface RegisterProps {
 export const SignUp = withRouter((props:RegisterProps ) => {
 
     console.log(props);
-    const { history } = props;
-    const auth = useAuth();
     const classes = useStyles();
-
-    const store = useStore();
-
     const [dialogOpen, setDialogOpen] = useState(false);
 
  

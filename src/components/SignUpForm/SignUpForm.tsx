@@ -26,7 +26,7 @@ interface RegisterState {
 export const RegisterForm = (props:RegisterFormProps) => {
 
     const dispatch = useDispatch(); // This is a Redux-specific hook that updates the store
-    const store = useStore();
+    const store2 = useStore();
     const name = useSelector<RegisterState>(state => state.email);
     const { register, handleSubmit } = useForm({ })
 
@@ -34,7 +34,7 @@ export const RegisterForm = (props:RegisterFormProps) => {
         console.log(props.id)
         // The ! is for strictly typed Typescript stuff
         if(props.id!){
-            server_calls.createUser( data); // props.id!,
+            server_calls.createUser(data); // props.id!,
             console.log(`Updated:${data} ${props.id}`);
             console.log(data);
             setTimeout( () => {window.location.replace('/SignIn')}, 1000); //this waits for a bit of time and then rteloads the page
@@ -49,7 +49,7 @@ export const RegisterForm = (props:RegisterFormProps) => {
             console.log(`Updated:${data.last_name}`);
             dispatch(choosePassword(data.password));
             console.log(`Updated:${data.password}`);
-            server_calls.createUser(store.getState()); //since this is the 'else' beacuse the contact doesnt exist then it will call the function to create the contact
+            server_calls.createUser(store2.getState()); //since this is the 'else' beacuse the contact doesnt exist then it will call the function to create the contact
             setTimeout( () => {window.location.replace('/')}, 7000)
         }
     }

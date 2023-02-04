@@ -7,7 +7,8 @@ import './style.css'
 import { firebaseConfig } from './firebaseConfig';
 import 'firebase/auth';
 import { Provider } from 'react-redux';
-import {store } from './redux/store';
+import {store} from './redux/store';
+// import {store2} from './redux/store2';
 
 
 let myTitle = "Ivan's Whiskey Shop"

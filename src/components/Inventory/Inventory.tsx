@@ -119,9 +119,11 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     drawer: {
       width: drawerWidth,
       flexShrink: 0,
+      backgroundColor: 'transparent'
     },
     drawerPaper: {
       width: drawerWidth,
+      backgroundColor: 'transparent'
     },
     drawerHeader: {
       display: 'flex',
@@ -168,7 +170,19 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
         marginLeft: '240px',
     },
     background: {
-        backgroundImage: `url(${image})`
+        backgroundImage: `url(${image})`,
+        bacgroundSize: 'cover',
+        backgroundPosition: 'center center',
+        overflow: 'hidden',
+        backgroundSize: '100%',
+        // position: 'fixed',
+        // opacity: 0.5,
+        zIndex: 3,
+        width: '100vw',
+        // marginTop:'-90px',
+        height: '100vh',
+        // position: 'absolute',
+        backgroundRepeat: 'no-repeat',
     }
 
     
@@ -208,11 +222,11 @@ export const Inventory = withRouter(( props:InventoryProps ) => {
         },
         {
             text: 'Sign In',
-            onClick: () => history.push('/user_signin')
+            onClick: () => history.push('/signin')
         },
         {
             text: 'Sign Out',
-            onClick: () => history.push('/SignOut')
+            onClick: () => history.push('/signout')
         },
         {
             text: 'About',

@@ -4,10 +4,10 @@ import { createSlice } from '@reduxjs/toolkit';
 const rootSlice2 = createSlice({
     name: "root",
     initialState: {
-        email: "Email",
-        first_name : "First Name",
-        last_name: "Last Name",
-        password: "Password",
+        email: "email",
+        first_name : "first_name",
+        last_name: "last_name",
+        password: "password",
     },
     reducers: {
         chooseEmail: (state, action) => {state.email = action.payload},

@@ -55,16 +55,20 @@ const useStyles = makeStyles({
     background: {
         backgroundImage: `url(${image})`,
         bacgroundSize: 'cover',
+        backgroundPosition: 'center center',
         // backgroundRepeat: 'no-repeat',
-        evrflow: 'hidden',
-        width: '100%',
-        height: '90%',
+        overflow: 'hidden',
+        // width: '100%',
+        // height: '90%',
         // backgroundPosition: 'top',
-        backGroundSize: 'auto',
+        backgroundSize: '100%',
         // position: 'fixed',
         // opacity: 0.5,
         zIndex: -1,
-        position: 'absolute'
+        width: '100vw',
+        // marginTop:'-90px',
+        height: '100vh',
+        // position: 'absolute'
     },
 
     forMat : {
