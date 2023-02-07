@@ -1,16 +1,50 @@
 // Store is the redux version of State
 
+import { Store } from '@material-ui/icons';
 import { configureStore } from '@reduxjs/toolkit';
-import { reducer} from './slices/RootSlice';
+import { Provider } from 'react-redux';
+import combStore from './slices/combinedStores';
+import {reducer1, reducer2} from './slices/RootSlice'
+
+// let reducer = combStore
 
 export const store = configureStore({
-    reducer, 
-    //this is an object
+    reducer : combStore,
+    // reducer2 : reducer2},
     devTools: true
 })
+
+// export const store
+
+
+// switch (store) {
+//     case './Inventory':
+//         return store = configureStore({
+//                 reducer : reducer1,
+//                 //this is an object
+//                 devTools: true})
+    
+//     case './SignUp':
+//         const store = configureStore({
+//                 reducer : reducer2,
+//                 devTools: true
+//             })
+//         }
+
+// export const store = configureStore({
+//     reducer : reducer1,
+//     //this is an object
+//     devTools: true
+// })
+
+// export const store2 = configureStore({
+//     reducer : reducer2,
+//     devTools: true
+// })
 
 
     // reducer2,
     // devTools: true)
 
 
+// export const store

@@ -17,6 +17,6 @@ const rootSlice2 = createSlice({
     }
 })
 
-export const reducer = rootSlice2.reducer;
+export const reducer2 = rootSlice2.reducer;
 export const {chooseEmail, chooseFirstname, chooseLastname, choosePassword } = rootSlice2.actions;
 

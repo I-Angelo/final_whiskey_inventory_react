@@ -7,7 +7,7 @@ let token = 'b3284ff9693493e20aef5a1fa848a42b6dec757f90116ba7';
 //GET
 export const server_calls = {
     get: async () => { //here on the 'async' we are requesting data and not sending any variables inside the parentheses
-        const response = await fetch('https://horse-gilded-gymnast.glitch.me/api/poisons', {
+        const response = await fetch('https://twisty-congruous-trouble.glitch.me/api/poisons', {
             method: 'GET',
             headers: {  //This is like the section on 'insomnia' for 'headers'
                 'Content-Type': 'application/json',
@@ -30,7 +30,7 @@ export const server_calls = {
 
     create: async(data: any = {}) => { //since we are 'creating' a new contact, we are passing in the parantheses information in the async
                                     // and the information is sent as an 'object' as it is in 'data: any {}' and th avriable declared is 'any'
-        const response = await fetch('https://horse-gilded-gymnast.glitch.me/api/poisons', {
+        const response = await fetch('https://twisty-congruous-trouble.glitch.me/api/poisons', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -53,7 +53,7 @@ export const server_calls = {
 
     update: async(id:string, data: any = {}) => { //we are passing an 'id' variable because we need to let the sapp know which contact we are 
                                             //updating
-        const response = await fetch(`https://horse-gilded-gymnast.glitch.me/api/poisons/${id}`, {
+        const response = await fetch(`https://twisty-congruous-trouble.glitch.me/api/poisons/${id}`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -65,7 +65,7 @@ export const server_calls = {
     },
 
     delete: async(id: string) => {
-        const response = await fetch(`https://horse-gilded-gymnast.glitch.me/api/poisons/${id}`, {
+        const response = await fetch(`https://twisty-congruous-trouble.glitch.me/api/poisons/${id}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json',
@@ -77,22 +77,22 @@ export const server_calls = {
 
     ////////////////////
 
-    usersGet: async () => { //here on the 'async' we are requesting data and not sending any variables inside the parentheses
-        const response = await fetch('https://horse-gilded-gymnast.glitch.me/auth2/register', {
-            method: 'GET',
-            headers: {  //This is like the section on 'insomnia' for 'headers'
-                'Content-Type': 'application/json',
-                'x-access-token': `Bearer ${token}` 
-            }
-        });
+    // usersGet: async () => { //here on the 'async' we are requesting data and not sending any variables inside the parentheses
+    //     const response = await fetch('https://horse-gilded-gymnast.glitch.me/auth2/register', {
+    //         method: 'GET',
+    //         headers: {  //This is like the section on 'insomnia' for 'headers'
+    //             'Content-Type': 'application/json',
+    //             'x-access-token': `Bearer ${token}` 
+    //         }
+    //     });
 
-        //Error handling
-        if (!response.ok) {
-            throw new Error('Failed to fetch data from server') 
-        }
+    //     //Error handling
+    //     if (!response.ok) {
+    //         throw new Error('Failed to fetch data from server') 
+    //     }
 
-        return await response.json()
-    },
+    //     return await response.json()
+    // },
 
     createUser: async(data: any = {}) => { 
         const response = await fetch('https://twisty-congruous-trouble.glitch.me/auth2/register', {
@@ -114,31 +114,31 @@ export const server_calls = {
         return await response.json()
         },
 
-    userUpdate: async(id:string, data: any = {}) => { //we are passing an 'id' variable because we need to let the sapp know which contact we are 
-        //updating
-        const response = await fetch(`https://horse-gilded-gymnast.glitch.me/auth2/register/${id}`, {
-            method: 'POST',
-            // headers: {
-            //     'Content-Type': 'application/json',
-            //     'x-access-token': `Bearer ${token}`
-            // },
+    // userUpdate: async(id:string, data: any = {}) => { //we are passing an 'id' variable because we need to let the sapp know which contact we are 
+    //     //updating
+    //     const response = await fetch(`https://twisty-congruous-trouble.glitch.me/auth2/register/${id}`, {
+    //         method: 'POST',
+    //         // headers: {
+    //         //     'Content-Type': 'application/json',
+    //         //     'x-access-token': `Bearer ${token}`
+    //         // },
 
-            body: JSON.stringify(data)
-        })
+    //         body: JSON.stringify(data)
+    //     })
 
-        if(!response.ok){
-            throw new Error('Failed to Create new data on server');
-        }
-    },
+    //     if(!response.ok){
+    //         throw new Error('Failed to Create new data on server');
+    //     }
+    // },
 
     
-    userDelete: async(id: string) => {
-        const response = await fetch(`https://horse-gilded-gymnast.glitch.me/auth2/register/${id}`, {
-            method: 'DELETE',
-            headers: {
-                'Content-Type': 'application/json',
-                'x-access-token': `Bearer ${token}`
-            }
-        })
-    }
+    // userDelete: async(id: string) => {
+    //     const response = await fetch(`https://horse-gilded-gymnast.glitch.me/auth2/register/${id}`, {
+    //         method: 'DELETE',
+    //         headers: {
+    //             'Content-Type': 'application/json',
+    //             'x-access-token': `Bearer ${token}`
+    //         }
+    //     })
+    // }
 }

@@ -7,12 +7,17 @@ import './style.css'
 import { firebaseConfig } from './firebaseConfig';
 import 'firebase/auth';
 import { Provider } from 'react-redux';
-import {store} from './redux/store';
 // import {store2} from './redux/store2';
+import {store } from './redux/store';
+import { reducer1, reducer2 } from './redux/slices/RootSlice';
+import combStore from './redux/slices/combinedStores';
 
 
 let myTitle = "Ivan's Whiskey Shop"
 
+// let test = {store, store2}
+
+// let store = combStore
 
 ReactDOM.render(
   <React.StrictMode>
@@ -40,7 +45,7 @@ ReactDOM.render(
         <SignOut></SignOut>
       </Route>
       <Route path='/signup'>
-        <SignUp></SignUp>
+        <SignUp ></SignUp>
       </Route>
 
       </Switch>

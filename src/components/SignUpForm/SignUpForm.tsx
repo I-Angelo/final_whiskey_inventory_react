@@ -50,7 +50,7 @@ export const RegisterForm = (props:RegisterFormProps) => {
             dispatch(choosePassword(data.password));
             console.log(`Updated:${data.password}`);
             server_calls.createUser(store2.getState()); //since this is the 'else' beacuse the contact doesnt exist then it will call the function to create the contact
-            setTimeout( () => {window.location.replace('/')}, 7000)
+            setTimeout( () => {window.location.replace('/signin')}, 7000)
         }
     }
 
